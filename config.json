@@ -20,7 +20,7 @@
     "iterations": 225000,
     "salt": 16,
     "nonce": 12,
-    "bip32": 24
+    "mnemonic": 24
   },
   "games": ["blackjack", "poker", "oldmaid", "soiltaire"],
   "original": true
