@@ -22,7 +22,6 @@ def propagate():
         "difficulty": difficulty.hex(),
         "nonce": 0,
         "extraNonce": 0,
-        "confirmations": 0,
         "blockHash": hash
       },
       "body": []
@@ -56,7 +55,6 @@ def propagate():
         "difficulty": difficulty.hex(),
         "nonce": 0,
         "extraNonce": 0,
-        "confirmations": 0,
         "blockHash": hash
       },
       "body": []
