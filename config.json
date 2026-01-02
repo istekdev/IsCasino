@@ -1,0 +1,12 @@
+{
+  "metadata": {
+    "developer": "ISTEK",
+    "github": "https://github.com/istekdev/IsCasino",
+    "created": 1767335159
+  },
+  "rng": {
+    "options": ["hash", "random", "urandom"],
+    "decision": "hash"
+  },
+  "games": ["blackjack", "poker", "oldmaid", "soiltaire"]
+}
