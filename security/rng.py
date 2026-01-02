@@ -1,5 +1,5 @@
-from hashlib import sha256
 import secrets, random, json
+from hashlib import sha256
 
 with open("./config.json", "r") as r:
   config = json.load(r)
