@@ -8,8 +8,8 @@
     "verifyHash": "80866a2c6137f7075ab30d2093554b40014239f19c566a273d75c8ecd505075a"
   },
   "rng": {
-    "options": ["hash", "random", "urandom"],
-    "decision": "hash"
+    "options": ["random", "urandom"],
+    "decision": "urandom"
   },
   "games": ["blackjack", "poker", "oldmaid", "soiltaire"],
   "original": true
