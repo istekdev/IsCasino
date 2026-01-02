@@ -11,6 +11,10 @@
     "options": ["random", "entropy"],
     "decision": "entropy"
   },
+  "blockchain": {
+    "difficulty": 808798400014519193840010452610588920209114332676217174433108307476480000,
+    "blockLimit": 5
+  },
   "games": ["blackjack", "poker", "oldmaid", "soiltaire"],
   "original": true
 }
