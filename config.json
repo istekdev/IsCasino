@@ -1,9 +1,10 @@
 {
   "metadata": {
+    "version": 1,
     "developer": "ISTEK",
     "github": "https://github.com/istekdev/IsCasino",
     "created": 1767335159,
-    "verifyHash": "2874694f98ecb6399a48b15feec314e00690d184a8412ef1c17a3b8bbf6b2f3f"
+    "verifyHash": "69ac2342d7f40f36cd31f4177fec338bb71a8a6aa2bbab8d044b259fc30a717c"
   },
   "rng": {
     "options": ["hash", "random", "urandom"],
