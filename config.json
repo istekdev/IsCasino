@@ -9,5 +9,6 @@
     "options": ["hash", "random", "urandom"],
     "decision": "hash"
   },
-  "games": ["blackjack", "poker", "oldmaid", "soiltaire"]
+  "games": ["blackjack", "poker", "oldmaid", "soiltaire"],
+  "original": true
 }
