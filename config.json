@@ -16,6 +16,12 @@
     "blockLimit": 5,
     "cpuUsage": 3
   },
+  "security": {
+    "iterations": 225000,
+    "salt": 16,
+    "nonce": 12,
+    "bip32": 24
+  },
   "games": ["blackjack", "poker", "oldmaid", "soiltaire"],
   "original": true
 }
