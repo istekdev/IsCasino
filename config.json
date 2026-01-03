@@ -20,7 +20,8 @@
     "iterations": 225000,
     "salt": 16,
     "nonce": 12,
-    "mnemonic": 24
+    "mnemonic": 24,
+    "path": "m/999'/0'/0/0"
   },
   "games": ["blackjack", "poker", "oldmaid", "soiltaire"],
   "original": true
