@@ -3,9 +3,6 @@ from hashlib import pbkdf2_hmac
 from pathlib import Path
 import os, json
 
-with open("./config.json", "r") as r:
-  config = json.load(r)
-
 def encrypt(user, password):
   with open(f"/data/users/{user}.dat", "rb") as r:
     user = r.read()
