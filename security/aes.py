@@ -9,8 +9,8 @@ with open("./config.json", "r") as r:
 def encrypt(user, password):
   with open(f"/data/users/{user}.dat", "rb") as r:
     user = r.read()
-  salt = os.urandom(16)
-  nonce = os.urandom(12)
+  salt = os.urandom(config["security"]["salt"])
+  nonce = os.urandom(config["security"]["nonce"])
   psw = bytearray(pbkdf2_hmac("sha256", password.encode("utf-8"), salt, config["security"]["iterations"], dklen=32))
 
   aes = AESGCM(psw)
@@ -24,8 +24,8 @@ def encrypt(user, password):
 def decrypt(user, password):
   with open(f"/data/users/{user}.dat", "rb") as r:
     user = r.read()
-  salt = user[0:16]
-  nonce = user[16:28]
+  salt = user[0:config["security"]["salt"]]
+  nonce = user[config["security"]["salt"]:(config["security"]["salt"] + config["security"]["nonce"])]
   blob = user[28:]
   psw = bytearray(pbkdf2_hmac("sha256", password.encode("utf-8"), salt, config["security"]["iterations"], dklen=32))
 
