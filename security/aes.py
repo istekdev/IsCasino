@@ -3,12 +3,15 @@ from hashlib import pbkdf2_hmac
 from pathlib import Path
 import os, json
 
+with open("./config.json", "r") as r:
+  config = json.load(r)
+
 def encrypt(user, password):
   with open(f"/data/users/{user}.dat", "rb") as r:
     user = r.read()
   salt = os.urandom(16)
   nonce = os.urandom(12)
-  psw = bytearray(pbkdf2_hmac("sha256", password.encode("utf-8"), salt, dklen=32))
+  psw = bytearray(pbkdf2_hmac("sha256", password.encode("utf-8"), salt, config["security"]["iterations"], dklen=32))
 
   aes = AESGCM(psw)
   ciphertext = salt + nonce + aes.encrypt(nonce, Path(f"/data/users/{user}.dat"), None)
@@ -24,7 +27,7 @@ def decrypt(user, password):
   salt = user[0:16]
   nonce = user[16:28]
   blob = user[28:]
-  psw = bytearray(pbkdf2_hmac("sha256", password.encode("utf-8"), salt, dklen=32))
+  psw = bytearray(pbkdf2_hmac("sha256", password.encode("utf-8"), salt, config["security"]["iterations"], dklen=32))
 
   aes = AESGCM(psw)
   plaintext = aes.decrypt(nonce, blob, None).decode("utf-8")
